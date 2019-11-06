@@ -1,6 +1,6 @@
 'use strict'
 
-import { app, protocol, BrowserWindow } from 'electron'
+import { app, protocol, BrowserWindow, ipcMain, dialog } from 'electron'
 import {
   createProtocol,
   installVueDevtools
@@ -87,3 +87,21 @@ if (isDevelopment) {
     })
   }
 }
+
+ipcMain.on('asynchronous-message', async (event, arg) => {
+  var options = { properties: ["openDirectory"] }
+  var folder
+  console.log(arg.type)
+  switch (arg.type) {
+    case 'choseFolder':
+      // code block
+      folder = await dialog.showOpenDialog(options)
+      await event.reply('asynchronous-reply', folder[0])
+      break
+    case 'install':
+      // code block
+      break
+    default:
+    // code block
+  }
+})
