@@ -5,8 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    installFolder: ''
   },
   mutations: {
+    setInstallFolder (state, path) {
+      state.installFolder = path
+    }
   },
   actions: {
   },
