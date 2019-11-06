@@ -4,7 +4,7 @@
   </div>
   <div class="footer">
     <hr/>
-    <div class="d-flex">
+    <div class="d-flex margins-creator">
       <b-button variant="danger" class="mr-auto">cancel</b-button>
       <b-button variant="primary">next</b-button>
     </div>
@@ -24,5 +24,8 @@ export default {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+.margins-creator {
+  margin: 0 15px 15px 15px
 }
 </style>
