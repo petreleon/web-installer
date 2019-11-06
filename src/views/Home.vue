@@ -15,7 +15,7 @@
       <hr />
       <div class="d-flex margins-buttons">
         <b-button variant="danger" class="mr-auto">cancel</b-button>
-        <b-button variant="primary">next</b-button>
+        <b-button variant="primary" v-on:click="$router.push('folder')">next</b-button>
       </div>
     </div>
   </div>
