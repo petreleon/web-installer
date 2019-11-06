@@ -1,0 +1,11 @@
+.margins-buttons {
+  margin: 0 15px 15px 15px;
+}
+.margins-content {
+  margin: 10px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

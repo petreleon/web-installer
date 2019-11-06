@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="home">
+    <div class="margins-content">
       <h1>License Agreement</h1>
       <b-form-textarea
         id="textarea"
@@ -13,7 +13,7 @@
     </div>
     <div class="footer">
       <hr />
-      <div class="d-flex margins-creator">
+      <div class="d-flex margins-buttons">
         <b-button variant="danger" class="mr-auto">cancel</b-button>
         <b-button variant="primary">next</b-button>
       </div>
@@ -23,10 +23,11 @@
 
 <script>
 // @ is an alias to /src
+import '@/styles/installer.css'
 
 export default {
-  name: "home",
-  data: function() {
+  name: 'home',
+  data: function () {
     return {
       licenseText: `Copyright (c) 2010-2015 Illumina, Inc.
 All rights reserved.
@@ -52,20 +53,10 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 `
-    };
+    }
   }
-};
+}
 </script>
 <style>
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-.margins-creator {
-  margin: 0 15px 15px 15px;
-}
-.home {
-  margin: 10px;
-}
+
 </style>
